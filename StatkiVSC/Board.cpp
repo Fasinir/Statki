@@ -21,11 +21,14 @@ board::board(int width, int height) {
     this->height = height;
 }
 board::~board() {
-    for (int i = 0; i < width; i++)
+    if (this->matrix != nullptr)
     {
-        delete[] matrix[i];
+        for (int i = 0; i < width; i++)
+        {
+            delete[] matrix[i];
+        }
+        delete[] matrix;
     }
-    delete[] matrix;
 }
 
 board::board() {
