@@ -69,10 +69,6 @@ bool board::shoot(int x, int y) {
     {
         return false;
     }
-    if (this->matrix == nullptr)
-    {
-        cout << "dupa\n";
-    }
     if (this->matrix[x][y] >= 0)
     {
         matrix[x][y] = -1;
